@@ -7,11 +7,9 @@
 
 import { writeFileSync, mkdirSync } from "fs";
 import { join } from "path";
-import { parseProfile, parseMice, parseCrowns, parseItems, loadHtml } from "../src/index.js";
-
-const MH_BASE = "https://www.mousehuntgame.com";
-const USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36";
-const DELAY_MS = 300;
+import { load } from "cheerio";
+import { HunterProfileClient } from "../src/index.js";
+import type { ProfileTab, MiceSubTab } from "../src/index.js";
 
 const hunterId = process.argv[2];
 if (!hunterId) {
@@ -22,100 +20,82 @@ if (!hunterId) {
 const outDir = join(import.meta.dirname!, "output", `hunter_${hunterId}`);
 mkdirSync(outDir, { recursive: true });
 
-async function fetchPage(params: Record<string, string>): Promise<string> {
-  const url = new URL("/profile.php", MH_BASE);
-  for (const [k, v] of Object.entries(params)) url.searchParams.set(k, v);
-
-  const resp = await fetch(url.toString(), {
-    headers: { "User-Agent": USER_AGENT, Accept: "text/html" },
-  });
-  if (!resp.ok) throw new Error(`HTTP ${resp.status} for ${url}`);
-  return resp.text();
-}
-
-function delay(ms: number) {
-  return new Promise((r) => setTimeout(r, ms));
-}
-
 function save(name: string, content: string) {
   const path = join(outDir, name);
   writeFileSync(path, content, "utf-8");
   console.log(`  Saved ${name} (${(content.length / 1024).toFixed(1)} KB)`);
 }
 
-interface TabConfig {
-  name: string;
-  params: Record<string, string>;
-  parser: (html: string) => unknown;
-}
+function prettyPrint(html: string): string {
+  const $ = load(html);
 
-const tabs: TabConfig[] = [
-  {
-    name: "profile",
-    params: { tab: "profile", uid: hunterId },
-    parser: parseProfile,
-  },
-  {
-    name: "mice_group",
-    params: { tab: "mice", sub_tab: "group", uid: hunterId },
-    parser: parseMice,
-  },
-  {
-    name: "mice_location",
-    params: { tab: "mice", sub_tab: "location", uid: hunterId },
-    parser: parseMice,
-  },
-  {
-    name: "kings_crowns",
-    params: { tab: "kings_crowns", uid: hunterId },
-    parser: parseCrowns,
-  },
-  {
-    name: "items",
-    params: { tab: "items", uid: hunterId },
-    parser: parseItems,
-  },
-];
+  const pageContent =
+    $(".mousehuntHud-page-tabContentContainer").html() ??
+    $(".hunterProfileItemsView").html() ??
+    $(".mouseCrownsView").html() ??
+    $("body").html() ??
+    html;
 
-console.log(`\nFetching profile for hunter #${hunterId}...\n`);
-
-for (const tab of tabs) {
-  console.log(`── ${tab.name} ──`);
-
-  const html = await fetchPage(tab.params);
-  save(`${tab.name}_raw.html`, html);
-
-  // Also save a pretty-printed version via cheerio
-  const $ = loadHtml(html);
-
-  // Extract just the page content (skip scripts, nav, etc.)
-  const pageContent = $(".mousehuntHud-page-tabContentContainer").html()
-    ?? $(".hunterProfileItemsView").html()
-    ?? $(".mouseCrownsView").html()
-    ?? $("body").html()
-    ?? html;
-
-  // Pretty-print: add newlines before each opening tag and indent
-  const formatted = pageContent
+  return pageContent
     .replace(/></g, ">\n<")
     .replace(/\n(<\/)/g, "\n$1")
     .split("\n")
     .map((line) => line.trim())
     .filter(Boolean)
-    .reduce((acc: string[], line) => {
-      // Simple indentation based on tag depth
-      const indent = acc.length > 0 ? "  " : "";
-      acc.push(line);
-      return acc;
-    }, [])
     .join("\n");
-  save(`${tab.name}_content.html`, formatted);
+}
 
-  // Parse and save JSON
-  const parsed = tab.parser(html);
-  save(`${tab.name}_parsed.json`, JSON.stringify(parsed, null, 2));
+interface TabConfig {
+  name: string;
+  tab: ProfileTab;
+  subTab?: MiceSubTab;
+}
 
-  await delay(DELAY_MS);
+const tabs: TabConfig[] = [
+  { name: "profile", tab: "profile" },
+  { name: "mice_group", tab: "mice", subTab: "group" },
+  { name: "mice_location", tab: "mice", subTab: "location" },
+  { name: "kings_crowns", tab: "kings_crowns" },
+  { name: "items", tab: "items" },
+];
+
+const client = new HunterProfileClient({ requestDelay: 300 });
+
+console.log(`\nFetching profile for hunter #${hunterId}...\n`);
+
+// Step 1: Fetch and save raw HTML for each tab
+for (const { name, tab, subTab } of tabs) {
+  console.log(`-- ${name} --`);
+
+  const html = await client.fetchTab(hunterId, tab, subTab);
+  save(`${name}_raw.html`, html);
+  save(`${name}_content.html`, prettyPrint(html));
+}
+
+// Step 2: Get full parsed profile and save JSON
+console.log("\n-- Parsing full profile --");
+const { data: fullProfile, warnings } = await client.getFullProfile(hunterId);
+
+save("profile_parsed.json", JSON.stringify(fullProfile.profile, null, 2));
+if (fullProfile.miceByGroup) {
+  save("mice_group_parsed.json", JSON.stringify(fullProfile.miceByGroup, null, 2));
+}
+if (fullProfile.miceByLocation) {
+  save("mice_location_parsed.json", JSON.stringify(fullProfile.miceByLocation, null, 2));
+}
+if (fullProfile.crowns) {
+  save("kings_crowns_parsed.json", JSON.stringify(fullProfile.crowns, null, 2));
+}
+if (fullProfile.items) {
+  save("items_parsed.json", JSON.stringify(fullProfile.items, null, 2));
+}
+
+// Step 3: Display warnings
+if (warnings.length > 0) {
+  console.log(`\n-- Warnings (${warnings.length}) --`);
+  for (const w of warnings) {
+    console.log(`  [${w.field}] ${w.message}${w.selector ? ` (${w.selector})` : ""}`);
+  }
 }
 
 console.log(`\nAll files saved to: ${outDir}`);
