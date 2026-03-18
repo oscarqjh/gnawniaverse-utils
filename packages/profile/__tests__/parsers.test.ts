@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { parseProfile, parseMice, parseCrowns, parseItems } from "../src/parsers.js";
+import { parseProfile, parseMice, parseCrowns, parseItems } from "../src/parsers/index.js";
 
 // ── Fixtures ────────────────────────────────────────────────────────
 

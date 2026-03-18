@@ -6,8 +6,8 @@
  * cross-origin restrictions in browsers.
  */
 
-import type { HunterProfile, FullHunterProfile } from "./types.js";
-import { parseProfile, parseMice, parseCrowns, parseItems } from "./parsers.js";
+import type { HunterProfile, FullHunterProfile } from "./types/index.js";
+import { parseProfile, parseMice, parseCrowns, parseItems } from "./parsers/index.js";
 
 /** Options for configuring fetch behavior. */
 export interface FetchOptions {
