@@ -15,6 +15,7 @@ import type {
   FavouriteMouse,
   TreasureMapInfo,
   TournamentAward,
+  ParseResult,
 } from "../types/index.js";
 import {
   parseDurationMs,
@@ -23,10 +24,29 @@ import {
   extractBgUrl,
   extractShowArg,
   parseAuraExpiry,
+  WarningCollector,
+  isCloudflareChallenge,
 } from "./helpers.js";
 
+const EMPTY_PROFILE: HunterProfile = {
+  uid: 0, name: "", rank: "", rankPercent: null, rankIconUrl: null,
+  location: "", locationBannerUrl: null, locationThumbnailUrl: null,
+  profileImageUrl: null, lastActive: null,
+  miceCaught: 0, miceTotal: 0, rareMiceCaught: 0, rareMiceTotal: 0, totalMiceCaught: 0,
+  huntingSince: null, loyaltyBadgeLevel: null, loyaltyBadgeYears: null,
+  hornStats: null, gold: 0, points: 0, goldenShield: null, team: null,
+  trap: null, trapStats: null, auras: [], favouriteMice: [], treasureMap: null, tournamentAwards: [],
+};
+
 /** Parse full hunter profile from profile tab HTML. */
-export function parseProfile(html: string): HunterProfile {
+export function parseProfile(html: string): ParseResult<HunterProfile> {
+  const w = new WarningCollector();
+
+  if (isCloudflareChallenge(html)) {
+    w.add("*", "Received Cloudflare challenge page");
+    return { data: { ...EMPTY_PROFILE }, warnings: w.warnings };
+  }
+
   const $ = load(html);
 
   // ── OG meta tags (fallback data) ──
@@ -308,35 +328,42 @@ export function parseProfile(html: string): HunterProfile {
     }
   });
 
+  if (!ogTitle) {
+    w.add("ogTitle", "Empty OG title", 'meta[property="og:title"]');
+  }
+
   return {
-    uid,
-    name,
-    rank: rankFromHtml || (rankMatch?.[1] ?? ""),
-    rankPercent,
-    rankIconUrl,
-    location,
-    locationBannerUrl,
-    locationThumbnailUrl,
-    profileImageUrl,
-    lastActive,
-    miceCaught,
-    miceTotal,
-    rareMiceCaught,
-    rareMiceTotal,
-    totalMiceCaught,
-    huntingSince,
-    loyaltyBadgeLevel,
-    loyaltyBadgeYears,
-    hornStats,
-    gold,
-    points,
-    goldenShield,
-    team,
-    trap,
-    trapStats,
-    auras,
-    favouriteMice,
-    treasureMap,
-    tournamentAwards,
+    data: {
+      uid,
+      name,
+      rank: rankFromHtml || (rankMatch?.[1] ?? ""),
+      rankPercent,
+      rankIconUrl,
+      location,
+      locationBannerUrl,
+      locationThumbnailUrl,
+      profileImageUrl,
+      lastActive,
+      miceCaught,
+      miceTotal,
+      rareMiceCaught,
+      rareMiceTotal,
+      totalMiceCaught,
+      huntingSince,
+      loyaltyBadgeLevel,
+      loyaltyBadgeYears,
+      hornStats,
+      gold,
+      points,
+      goldenShield,
+      team,
+      trap,
+      trapStats,
+      auras,
+      favouriteMice,
+      treasureMap,
+      tournamentAwards,
+    },
+    warnings: w.warnings,
   };
 }

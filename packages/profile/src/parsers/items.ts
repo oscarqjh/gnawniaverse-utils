@@ -3,11 +3,18 @@
  */
 
 import { load } from "cheerio";
-import type { CollectionItem, ItemCategory, ItemsData } from "../types/index.js";
-import { parseNum, textOrNull, extractBgUrl } from "./helpers.js";
+import type { CollectionItem, ItemCategory, ItemsData, ParseResult } from "../types/index.js";
+import { parseNum, textOrNull, extractBgUrl, WarningCollector, isCloudflareChallenge } from "./helpers.js";
 
 /** Parse item collection from the items tab HTML. */
-export function parseItems(html: string): ItemsData {
+export function parseItems(html: string): ParseResult<ItemsData> {
+  const w = new WarningCollector();
+
+  if (isCloudflareChallenge(html)) {
+    w.add("*", "Received Cloudflare challenge page");
+    return { data: { items: [], categories: [] }, warnings: w.warnings };
+  }
+
   const $ = load(html);
   const items: CollectionItem[] = [];
 
@@ -53,5 +60,5 @@ export function parseItems(html: string): ItemsData {
     }
   });
 
-  return { items, categories };
+  return { data: { items, categories }, warnings: w.warnings };
 }

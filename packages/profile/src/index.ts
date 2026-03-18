@@ -31,6 +31,15 @@ export type {
   FullHunterProfile,
 } from "./types/index.js";
 
+// Errors
+export {
+  GnawniaVerseError,
+  HttpError,
+  HunterNotFoundError,
+  RateLimitError,
+  ParseError,
+} from "./errors.js";
+
 // Parsers (for custom HTML sources)
 export {
   parseProfile,
@@ -39,9 +48,9 @@ export {
   parseItems,
 } from "./parsers/index.js";
 
-// Fetchers (server-side only)
-export type { FetchOptions } from "./fetcher.js";
-export {
-  fetchHunterProfile,
-  fetchFullHunterProfile,
-} from "./fetcher.js";
+// Client
+export { HunterProfileClient } from "./client.js";
+
+// Fetcher
+export { HttpProfileFetcher } from "./fetcher.js";
+export type { HttpFetcherOptions } from "./fetcher.js";

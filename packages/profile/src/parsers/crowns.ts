@@ -3,11 +3,24 @@
  */
 
 import { load } from "cheerio";
-import type { CrownsData, CrownTier, CrownMouse } from "../types/index.js";
-import { parseNum } from "./helpers.js";
+import type { CrownsData, CrownTier, CrownMouse, ParseResult } from "../types/index.js";
+import { parseNum, WarningCollector, isCloudflareChallenge } from "./helpers.js";
 
 /** Parse King's Crowns data from the crowns tab HTML. */
-export function parseCrowns(html: string): CrownsData {
+export function parseCrowns(html: string): ParseResult<CrownsData> {
+  const w = new WarningCollector();
+
+  if (isCloudflareChallenge(html)) {
+    w.add("*", "Received Cloudflare challenge page");
+    return {
+      data: {
+        crowns: { diamond: [], platinum: [], gold: [], silver: [], bronze: [] },
+        summary: { diamond: 0, platinum: 0, gold: 0, silver: 0, bronze: 0 },
+      },
+      warnings: w.warnings,
+    };
+  }
+
   const $ = load(html);
   const tiers: CrownTier[] = ["diamond", "platinum", "gold", "silver", "bronze"];
   const crowns: Record<CrownTier, CrownMouse[]> = {
@@ -42,5 +55,5 @@ export function parseCrowns(html: string): CrownsData {
     summary[tier] = crowns[tier].length;
   }
 
-  return { crowns, summary };
+  return { data: { crowns, summary }, warnings: w.warnings };
 }

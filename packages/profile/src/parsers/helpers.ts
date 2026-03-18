@@ -1,3 +1,5 @@
+import type { ParseWarning } from "../types/index.js";
+
 /** Parse a relative duration like "3 weeks 1 day 6 hours" into milliseconds. */
 export function parseDurationMs(s: string): number {
   let ms = 0;
@@ -73,4 +75,15 @@ export function parseAuraExpiry(raw: string): string | null {
 
   const dt = new Date(parseInt(m[3], 10), monthIdx, parseInt(m[2], 10), hour, minute);
   return isNaN(dt.getTime()) ? null : dt.toISOString();
+}
+
+export class WarningCollector {
+  readonly warnings: ParseWarning[] = [];
+  add(field: string, message: string, selector?: string): void {
+    this.warnings.push({ field, message, selector });
+  }
+}
+
+export function isCloudflareChallenge(html: string): boolean {
+  return html.includes("<title>Just a moment</title>");
 }

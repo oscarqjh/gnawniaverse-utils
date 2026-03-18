@@ -3,11 +3,18 @@
  */
 
 import { load } from "cheerio";
-import type { MouseStat, MouseCategory, MiceData } from "../types/index.js";
-import { textOrNull, extractBgUrl, extractShowArg } from "./helpers.js";
+import type { MouseStat, MouseCategory, MiceData, ParseResult } from "../types/index.js";
+import { textOrNull, extractBgUrl, extractShowArg, WarningCollector, isCloudflareChallenge } from "./helpers.js";
 
 /** Parse mouse catch statistics from the mice tab HTML. */
-export function parseMice(html: string): MiceData {
+export function parseMice(html: string): ParseResult<MiceData> {
+  const w = new WarningCollector();
+
+  if (isCloudflareChallenge(html)) {
+    w.add("*", "Received Cloudflare challenge page");
+    return { data: { mice: [], categories: [] }, warnings: w.warnings };
+  }
+
   const $ = load(html);
   const mice: MouseStat[] = [];
   const categories: MouseCategory[] = [];
@@ -62,5 +69,5 @@ export function parseMice(html: string): MiceData {
     });
   });
 
-  return { mice, categories };
+  return { data: { mice, categories }, warnings: w.warnings };
 }
