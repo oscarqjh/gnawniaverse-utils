@@ -1,0 +1,756 @@
+{
+  "mice": [
+    {
+      "type": "absolutia_harmonius",
+      "name": "Absolutia Harmonius",
+      "caught": true,
+      "catches": 2,
+      "misses": 0,
+      "averageWeight": "1 lb. 6 oz.",
+      "heaviestCatch": "1 lb. 8 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/54b15220b319c85c92df8d2f330c709e.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "arcticus_the_biting_frost",
+      "name": "Arcticus the Biting Frost",
+      "caught": true,
+      "catches": 172,
+      "misses": 67,
+      "averageWeight": "30 lb. 6 oz.",
+      "heaviestCatch": "32 lb. 0 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/1e70b208b2b18dc16f286b47a3efd5c2.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "avalancheus_the_glacial",
+      "name": "Avalancheus the Glacial",
+      "caught": true,
+      "catches": 160,
+      "misses": 19,
+      "averageWeight": "2 lb. 12 oz.",
+      "heaviestCatch": "3 lb. 0 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/2a2f6a04271df08031bb1b37c5be6781.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "belchazar_banewright",
+      "name": "Belchazar Banewright",
+      "caught": true,
+      "catches": 43,
+      "misses": 22,
+      "averageWeight": "2 lb. 10 oz.",
+      "heaviestCatch": "2 lb. 14 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/d562006a5820c1826511690e8c728a81.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "blizzara_winterosa",
+      "name": "Blizzara Winterosa",
+      "caught": true,
+      "catches": 130,
+      "misses": 43,
+      "averageWeight": "7 oz.",
+      "heaviestCatch": "9 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/9200253e2438eb2f5e363215eb8610e3.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "chillandria_permafrost",
+      "name": "Chillandria Permafrost",
+      "caught": true,
+      "catches": 158,
+      "misses": 63,
+      "averageWeight": "1 lb. 9 oz.",
+      "heaviestCatch": "1 lb. 12 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/58a50b6e50da138d3af6d98bf4630bae.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "colonel_crisp",
+      "name": "Colonel Crisp",
+      "caught": true,
+      "catches": 122,
+      "misses": 33,
+      "averageWeight": "6 oz.",
+      "heaviestCatch": "8 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/da75266eccefb377a5daf0d6d832594a.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "combustius_furnaceheart",
+      "name": "Combustius Furnaceheart",
+      "caught": true,
+      "catches": 69,
+      "misses": 33,
+      "averageWeight": "2 lb. 0 oz.",
+      "heaviestCatch": "2 lb. 4 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/fd152019d6393bea1b6779c46d97c4e2.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "corrupticus_the_blight_baron",
+      "name": "Corrupticus the Blight Baron",
+      "caught": true,
+      "catches": 24,
+      "misses": 15,
+      "averageWeight": "24 lb. 2 oz.",
+      "heaviestCatch": "26 lb. 3 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/40ccc82720b38fff4657fb812900ac38.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "crematio_scorchworth",
+      "name": "Crematio Scorchworth",
+      "caught": true,
+      "catches": 36,
+      "misses": 6,
+      "averageWeight": "13 oz.",
+      "heaviestCatch": "1 lb. 0 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/c7e2f7ffb1c700cdb76cf873582f7286.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "dreck_grimehaven",
+      "name": "Dreck Grimehaven",
+      "caught": true,
+      "catches": 117,
+      "misses": 38,
+      "averageWeight": "9 oz.",
+      "heaviestCatch": "12 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/4214c9ac0fbc0d2cc7b752d154df2fd6.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "flamina_cinderbreath",
+      "name": "Flamina Cinderbreath",
+      "caught": true,
+      "catches": 31,
+      "misses": 13,
+      "averageWeight": "15 oz.",
+      "heaviestCatch": "1 lb. 2 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/c2d6ef955184c9cec74914e7eb780cf4.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "frigidocius_coldshot",
+      "name": "Frigidocius Coldshot",
+      "caught": true,
+      "catches": 31,
+      "misses": 7,
+      "averageWeight": "1 lb. 4 oz.",
+      "heaviestCatch": "1 lb. 6 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/3ea37c786c64004d0b3b7f5045d202e2.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "frostnip_icebound",
+      "name": "Frostnip Icebound",
+      "caught": true,
+      "catches": 62,
+      "misses": 9,
+      "averageWeight": "4 oz.",
+      "heaviestCatch": "6 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/5fc41220469b0c183eec531c3a75707a.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "goopus_dredgemore",
+      "name": "Goopus Dredgemore",
+      "caught": true,
+      "catches": 43,
+      "misses": 7,
+      "averageWeight": "5 oz.",
+      "heaviestCatch": "7 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/af41e18c373838e250248fdb62c665d1.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "iciclesius_the_defender",
+      "name": "Iciclesius the Defender",
+      "caught": true,
+      "catches": 114,
+      "misses": 35,
+      "averageWeight": "9 oz.",
+      "heaviestCatch": "12 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/89c5ef575d965475bac683ea106d0e42.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "incendarius_the_unquenchable",
+      "name": "Incendarius the Unquenchable",
+      "caught": true,
+      "catches": 50,
+      "misses": 7,
+      "averageWeight": "1 lb. 9 oz.",
+      "heaviestCatch": "1 lb. 12 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/fbc94b208fd5b992f7b6bc6d2b81ffc6.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "magnatius_majestica",
+      "name": "Magnatius Majestica",
+      "caught": true,
+      "catches": 3,
+      "misses": 1,
+      "averageWeight": "1 lb. 2 oz.",
+      "heaviestCatch": "1 lb. 3 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/6b102fc94efec0b3e9e9cfa5f2254cd5.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "malignus_vilestrom",
+      "name": "Malignus Vilestrom",
+      "caught": true,
+      "catches": 28,
+      "misses": 6,
+      "averageWeight": "1 lb. 10 oz.",
+      "heaviestCatch": "1 lb. 12 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/6fdb41240addade01efd024491742969.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "mythical_dragon_emperor",
+      "name": "Mythical Dragon Emperor",
+      "caught": true,
+      "catches": 18,
+      "misses": 5,
+      "averageWeight": "53 lb. 4 oz.",
+      "heaviestCatch": "59 lb. 15 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/83bbef2d1a69f028bb451a363f29eb70.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "noxio_sludgewell",
+      "name": "Noxio Sludgewell",
+      "caught": true,
+      "catches": 126,
+      "misses": 34,
+      "averageWeight": "12 oz.",
+      "heaviestCatch": "14 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/9a9fbff0a05cebf97bc5508a709631e8.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "pestilentia_the_putrid",
+      "name": "Pestilentia the Putrid",
+      "caught": true,
+      "catches": 55,
+      "misses": 8,
+      "averageWeight": "2 lb. 7 oz.",
+      "heaviestCatch": "2 lb. 10 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/1abc5997dcaa6fd2bf9bfdbe6cae8e0b.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "rimeus_polarblast",
+      "name": "Rimeus Polarblast",
+      "caught": true,
+      "catches": 28,
+      "misses": 1,
+      "averageWeight": "1 lb. 7 oz.",
+      "heaviestCatch": "1 lb. 10 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/ba296c5e3e92e1661a517c0a34be60eb.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "squire_sizzleton",
+      "name": "Squire Sizzleton",
+      "caught": true,
+      "catches": 65,
+      "misses": 16,
+      "averageWeight": "2 oz.",
+      "heaviestCatch": "3 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/4a144c5a018cea3d1f0af7c0226029c3.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "sulfurious_the_raging_inferno",
+      "name": "Sulfurious the Raging Inferno",
+      "caught": true,
+      "catches": 38,
+      "misses": 19,
+      "averageWeight": "33 lb. 8 oz.",
+      "heaviestCatch": "34 lb. 15 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/cc2a7a720b45d6324437c2aa7b59dd14.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "supremia_magnificus",
+      "name": "Supremia Magnificus",
+      "caught": true,
+      "catches": 14,
+      "misses": 2,
+      "averageWeight": "1 lb. 13 oz.",
+      "heaviestCatch": "2 lb. 0 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/23f39dea81f338fc11661d2e627ad46a.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "threeimat",
+      "name": "Three'amat the Mother of Dragons",
+      "caught": true,
+      "catches": 30,
+      "misses": 1,
+      "averageWeight": "43 lb. 13 oz.",
+      "heaviestCatch": "45 lb. 0 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/6974a50476bbd2dc2f9624e204b535b9.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "torchbearer_tinderhelm",
+      "name": "Torchbearer Tinderhelm",
+      "caught": true,
+      "catches": 106,
+      "misses": 45,
+      "averageWeight": "4 oz.",
+      "heaviestCatch": "6 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/6c8b8becf383c6831a8a1dc4e6793468.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "tranquilia_protecticus",
+      "name": "Tranquilia Protecticus",
+      "caught": true,
+      "catches": 2,
+      "misses": 0,
+      "averageWeight": "11 oz.",
+      "heaviestCatch": "14 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/27caf4df12866eba5c6651aefb2f872f.gif?cv=8",
+      "category": "draconic_depths"
+    },
+    {
+      "type": "venomona_festerbloom",
+      "name": "Venomona Festerbloom",
+      "caught": true,
+      "catches": 30,
+      "misses": 10,
+      "averageWeight": "2 lb. 3 oz.",
+      "heaviestCatch": "2 lb. 6 oz.",
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/5d720aff789b4ea3178e1175f6fc24fa.gif?cv=8",
+      "category": "draconic_depths"
+    }
+  ],
+  "categories": [
+    {
+      "key": "acolyte_realm",
+      "name": "Acolyte Realm",
+      "progress": "12 of 13",
+      "complete": false
+    },
+    {
+      "key": "afterword_acres",
+      "name": "Afterword Acres",
+      "progress": "14 of 15",
+      "complete": false
+    },
+    {
+      "key": "balacks_cove",
+      "name": "Balack's Cove",
+      "progress": "10 of 10",
+      "complete": true
+    },
+    {
+      "key": "bazaar",
+      "name": "Bazaar",
+      "progress": "10 of 16",
+      "complete": false
+    },
+    {
+      "key": "bountiful_beanstalk",
+      "name": "Bountiful Beanstalk",
+      "progress": "33 of 34",
+      "complete": false
+    },
+    {
+      "key": "rift_bristle_woods",
+      "name": "Bristle Woods Rift",
+      "progress": "20 of 20",
+      "complete": true
+    },
+    {
+      "key": "rift_burroughs",
+      "name": "Burroughs Rift",
+      "progress": "38 of 38",
+      "complete": true
+    },
+    {
+      "key": "calm_clearing",
+      "name": "Calm Clearing",
+      "progress": "13 of 15",
+      "complete": false
+    },
+    {
+      "key": "queso_quarry",
+      "name": "Cantera Quarry",
+      "progress": "9 of 9",
+      "complete": true
+    },
+    {
+      "key": "cape_clawed",
+      "name": "Cape Clawed",
+      "progress": "16 of 17",
+      "complete": false
+    },
+    {
+      "key": "catacombs",
+      "name": "Catacombs",
+      "progress": "18 of 21",
+      "complete": false
+    },
+    {
+      "key": "claw_shot_city",
+      "name": "Claw Shot City",
+      "progress": "19 of 22",
+      "complete": false
+    },
+    {
+      "key": "conclusion_cliffs",
+      "name": "Conclusion Cliffs",
+      "progress": "2 of 45",
+      "complete": false
+    },
+    {
+      "key": "zugzwang_library",
+      "name": "Crystal Library",
+      "progress": "13 of 13",
+      "complete": true
+    },
+    {
+      "key": "derr_dunes",
+      "name": "Derr Dunes",
+      "progress": "11 of 13",
+      "complete": false
+    },
+    {
+      "key": "dojo",
+      "name": "Dojo",
+      "progress": "13 of 13",
+      "complete": true
+    },
+    {
+      "key": "dracano",
+      "name": "Dracano",
+      "progress": "3 of 3",
+      "complete": true
+    },
+    {
+      "key": "draconic_depths",
+      "name": "Draconic Depths",
+      "progress": "30 of 30",
+      "complete": true
+    },
+    {
+      "key": "elub_shore",
+      "name": "Elub Shore",
+      "progress": "12 of 13",
+      "complete": false
+    },
+    {
+      "key": "epilogue_falls",
+      "name": "Epilogue Falls",
+      "progress": "15 of 15",
+      "complete": true
+    },
+    {
+      "key": "desert_warpath",
+      "name": "Fiery Warpath",
+      "progress": "19 of 20",
+      "complete": false
+    },
+    {
+      "key": "floating_islands",
+      "name": "Floating Islands",
+      "progress": "67 of 71",
+      "complete": false
+    },
+    {
+      "key": "forbidden_grove",
+      "name": "Forbidden Grove",
+      "progress": "18 of 20",
+      "complete": false
+    },
+    {
+      "key": "foreword_farm",
+      "name": "Foreword Farm",
+      "progress": "8 of 9",
+      "complete": false
+    },
+    {
+      "key": "fort_rox",
+      "name": "Fort Rox",
+      "progress": "24 of 25",
+      "complete": false
+    },
+    {
+      "key": "fungal_cavern",
+      "name": "Fungal Cavern",
+      "progress": "32 of 32",
+      "complete": true
+    },
+    {
+      "key": "rift_furoma",
+      "name": "Furoma Rift",
+      "progress": "21 of 21",
+      "complete": true
+    },
+    {
+      "key": "rift_gnawnia",
+      "name": "Gnawnia Rift",
+      "progress": "16 of 16",
+      "complete": true
+    },
+    {
+      "key": "train_station",
+      "name": "Gnawnian Express Station",
+      "progress": "19 of 31",
+      "complete": false
+    },
+    {
+      "key": "great_gnarled_tree",
+      "name": "Great Gnarled Tree",
+      "progress": "18 of 22",
+      "complete": false
+    },
+    {
+      "key": "harbour",
+      "name": "Harbour",
+      "progress": "19 of 23",
+      "complete": false
+    },
+    {
+      "key": "iceberg",
+      "name": "Iceberg",
+      "progress": "26 of 26",
+      "complete": true
+    },
+    {
+      "key": "jungle_of_dread",
+      "name": "Jungle of Dread",
+      "progress": "8 of 8",
+      "complete": true
+    },
+    {
+      "key": "kings_arms",
+      "name": "King's Arms",
+      "progress": "17 of 19",
+      "complete": false
+    },
+    {
+      "key": "kings_gauntlet",
+      "name": "King's Gauntlet",
+      "progress": "31 of 34",
+      "complete": false
+    },
+    {
+      "key": "laboratory",
+      "name": "Laboratory",
+      "progress": "11 of 12",
+      "complete": false
+    },
+    {
+      "key": "labyrinth",
+      "name": "Labyrinth",
+      "progress": "26 of 26",
+      "complete": true
+    },
+    {
+      "key": "lagoon",
+      "name": "Lagoon",
+      "progress": "17 of 17",
+      "complete": true
+    },
+    {
+      "key": "desert_oasis",
+      "name": "Living Garden",
+      "progress": "17 of 17",
+      "complete": true
+    },
+    {
+      "key": "lost_city",
+      "name": "Lost City",
+      "progress": "13 of 13",
+      "complete": true
+    },
+    {
+      "key": "meadow",
+      "name": "Meadow",
+      "progress": "16 of 16",
+      "complete": true
+    },
+    {
+      "key": "meditation_room",
+      "name": "Meditation Room",
+      "progress": "4 of 4",
+      "complete": true
+    },
+    {
+      "key": "mountain",
+      "name": "Mountain",
+      "progress": "21 of 22",
+      "complete": false
+    },
+    {
+      "key": "mousoleum",
+      "name": "Mousoleum",
+      "progress": "12 of 15",
+      "complete": false
+    },
+    {
+      "key": "moussu_picchu",
+      "name": "Moussu Picchu",
+      "progress": "22 of 24",
+      "complete": false
+    },
+    {
+      "key": "desert_city",
+      "name": "Muridae Market",
+      "progress": "13 of 13",
+      "complete": true
+    },
+    {
+      "key": "nerg_plains",
+      "name": "Nerg Plains",
+      "progress": "11 of 13",
+      "complete": false
+    },
+    {
+      "key": "pinnacle_chamber",
+      "name": "Pinnacle Chamber",
+      "progress": "2 of 3",
+      "complete": false
+    },
+    {
+      "key": "queso_plains",
+      "name": "Prickly Plains",
+      "progress": "9 of 9",
+      "complete": true
+    },
+    {
+      "key": "prologue_pond",
+      "name": "Prologue Pond",
+      "progress": "10 of 11",
+      "complete": false
+    },
+    {
+      "key": "queso_geyser",
+      "name": "Queso Geyser",
+      "progress": "21 of 21",
+      "complete": true
+    },
+    {
+      "key": "queso_river",
+      "name": "Queso River",
+      "progress": "6 of 6",
+      "complete": true
+    },
+    {
+      "key": "ss_huntington_ii",
+      "name": "S.S. Huntington IV",
+      "progress": "19 of 19",
+      "complete": true
+    },
+    {
+      "key": "super_brie_factory",
+      "name": "SUPER|brie+ Factory",
+      "progress": "31 of 31",
+      "complete": true
+    },
+    {
+      "key": "sand_dunes",
+      "name": "Sand Dunes",
+      "progress": "12 of 12",
+      "complete": true
+    },
+    {
+      "key": "school_of_sorcery",
+      "name": "School of Sorcery",
+      "progress": "25 of 28",
+      "complete": false
+    },
+    {
+      "key": "seasonal_garden",
+      "name": "Seasonal Garden",
+      "progress": "22 of 24",
+      "complete": false
+    },
+    {
+      "key": "slushy_shoreline",
+      "name": "Slushy Shoreline",
+      "progress": "11 of 11",
+      "complete": true
+    },
+    {
+      "key": "sunken_city",
+      "name": "Sunken City",
+      "progress": "60 of 60",
+      "complete": true
+    },
+    {
+      "key": "table_of_contents",
+      "name": "Table of Contents",
+      "progress": "9 of 16",
+      "complete": false
+    },
+    {
+      "key": "tournament_hall",
+      "name": "Tournament Hall",
+      "progress": "13 of 16",
+      "complete": false
+    },
+    {
+      "key": "town_of_digby",
+      "name": "Town of Digby",
+      "progress": "18 of 22",
+      "complete": false
+    },
+    {
+      "key": "town_of_gnawnia",
+      "name": "Town of Gnawnia",
+      "progress": "19 of 22",
+      "complete": false
+    },
+    {
+      "key": "pollution_outbreak",
+      "name": "Toxic Spill",
+      "progress": "22 of 23",
+      "complete": false
+    },
+    {
+      "key": "training_grounds",
+      "name": "Training Grounds",
+      "progress": "14 of 15",
+      "complete": false
+    },
+    {
+      "key": "rift_valour",
+      "name": "Valour Rift",
+      "progress": "26 of 26",
+      "complete": true
+    },
+    {
+      "key": "rift_whisker_woods",
+      "name": "Whisker Woods Rift",
+      "progress": "26 of 26",
+      "complete": true
+    },
+    {
+      "key": "windmill",
+      "name": "Windmill",
+      "progress": "16 of 18",
+      "complete": false
+    },
+    {
+      "key": "ancient_city",
+      "name": "Zokor",
+      "progress": "38 of 38",
+      "complete": true
+    },
+    {
+      "key": "zugzwang_tower",
+      "name": "Zugzwang's Tower",
+      "progress": "13 of 13",
+      "complete": true
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "uid": 6268658,
+  "name": "Tey Zi Pin",
+  "rank": "Sage",
+  "rankPercent": 1.38,
+  "rankIconUrl": "https://www.mousehuntgame.com/images/titles/0f12447b3f95af94e89981a414502a58.gif?cv=8",
+  "location": "Draconic Depths",
+  "locationBannerUrl": "https://www.mousehuntgame.com/images/environments/cfdceeef8614ac8b5f625e9cc09c272d.jpg?cv=8",
+  "locationThumbnailUrl": "https://www.mousehuntgame.com/images/environments/de21170f614ec5cbd112626d059c09fd.jpg?cv=8",
+  "profileImageUrl": "https://graph.facebook.com/100000471574409/picture?type=large&access_token=10337532241|e83c95e8f5334533413589aa551ed2e8",
+  "lastActive": "39 minutes",
+  "miceCaught": 1040,
+  "miceTotal": 1120,
+  "rareMiceCaught": 165,
+  "rareMiceTotal": 165,
+  "totalMiceCaught": 194201,
+  "huntingSince": "2011-11-30",
+  "loyaltyBadgeLevel": 10,
+  "loyaltyBadgeYears": 14,
+  "hornStats": {
+    "total": 234607,
+    "active": 74334,
+    "passive": 94308,
+    "linked": 65965
+  },
+  "gold": 874936952,
+  "points": 9920364831,
+  "goldenShield": {
+    "hasShield": true,
+    "expiryDate": "2026-04-07T23:08:07.758Z",
+    "expiryRaw": "2 weeks 6 days 8 hours"
+  },
+  "team": {
+    "name": "Fam Hunters",
+    "id": 104884
+  },
+  "trap": {
+    "baseId": 3023,
+    "weaponId": 3728,
+    "skinId": 3819,
+    "baitId": 3764,
+    "imageUrl": "https://www.mousehuntgame.com/images/trapimage.php?base=3023&weapon=3728&skin=3819&bait=3764",
+    "weapon": {
+      "name": "Chrome Dragon Slayer Cannon",
+      "type": "chrome_dragon_slayer_cannon_weapon",
+      "thumbnailUrl": "https://www.mousehuntgame.com/images/items/weapons/82ba91ffed5dade01bda8bbbdc0f7d2e.jpg?cv=8",
+      "quantity": null
+    },
+    "base": {
+      "name": "Signature Series Denture Base",
+      "type": "upgraded_denture_base",
+      "thumbnailUrl": "https://www.mousehuntgame.com/images/items/bases/48391307ca9623bb617a2e90e7151570.jpg?cv=8",
+      "quantity": null
+    },
+    "bait": {
+      "name": "Elemental Emmental Cheese",
+      "type": "elemental_emmental_cheese",
+      "thumbnailUrl": "https://www.mousehuntgame.com/images/items/bait/da68d2f3d86a954ccca44e4b99e20ee5.gif?cv=8",
+      "quantity": 26
+    },
+    "charm": {
+      "name": "Ultimate Dragonbane Charm",
+      "type": "ultimate_dragonbane_trinket",
+      "thumbnailUrl": "https://www.mousehuntgame.com/images/items/trinkets/5566a33bd1b81f26597d26e79f427543.gif?cv=8",
+      "quantity": 914
+    },
+    "skin": {
+      "name": "Chrome Holiday Candle Cannon Trap Skin",
+      "type": "chrome_candle_cannon_trap_skin",
+      "thumbnailUrl": "https://www.mousehuntgame.com/images/items/skins/1e158b5812401295f2216e9f6ab12ee7.jpg?cv=8",
+      "quantity": null
+    }
+  },
+  "trapStats": {
+    "power": 33313,
+    "powerType": "Draconic",
+    "luck": 93,
+    "attractionBonus": "40%",
+    "cheeseEffect": "Fresh"
+  },
+  "auras": [
+    {
+      "type": "MiniEventLabyrinthLostChest",
+      "active": false,
+      "title": "You have the A-MAZE-ing Aura!",
+      "description": "This special Trap Aura...• Adds +5 Luck to your trap while in the Labyrinth or Zokor• Adds a bonus chance of preventing Dead End Clues• Doubles special loot dropped by District Leaders• Adds new Infinite Labyrinth Skin as loot to District Leaders.",
+      "expiryDate": "2026-03-18T15:08:00.000Z",
+      "expiryRaw": "March 18, 2026 @ 11:08pm (Local Time)"
+    },
+    {
+      "type": "MiniEventFestiveAura",
+      "active": false,
+      "title": "You have the Winter Aura!",
+      "description": "This special Trap Aura adds +5 Luck to your trap and a chance for mice to drop special festive loot throughout the Kingdom.\n\t\t\t\t\n\t\t\t\tThe aura can be extended up to:\n\t\t\t\tMarch 20, 2026 03:46pm (UTC)",
+      "expiryDate": "2026-02-24T19:23:00.000Z",
+      "expiryRaw": "February 25, 2026 @ 3:23am (Local Time)"
+    },
+    {
+      "type": "QuestRelicHunter",
+      "active": false,
+      "title": "You have the Slayer Aura!",
+      "description": "This special Trap Aura adds +5 Luck to your trap and will add an extra Ancient Relic on any mice that drop them!",
+      "expiryDate": "2026-03-07T05:46:00.000Z",
+      "expiryRaw": "March 7, 2026 @ 1:46pm (Local Time)"
+    },
+    {
+      "type": "MiniEventPillowcase",
+      "active": false,
+      "title": "You have the Sugar Rush Aura!",
+      "description": "This special Trap Aura adds 10% Power Bonus to your trap and gives Candy Charms an added boost! You'll also find Spooky Shuffle Tickets and Candy Charms as loot drops from mice!",
+      "expiryDate": "2026-03-18T15:08:00.000Z",
+      "expiryRaw": "Mar 18 2026 @ 11:08pm"
+    },
+    {
+      "type": "QuestChromeAura",
+      "active": false,
+      "title": "You have the Chrome Aura!",
+      "description": "This special Trap Aura adds +5 Luck Bonus to your trap with the chance at the following additional loot:- Chrome Theme Scrap II- Chrome Charms",
+      "expiryDate": "2026-03-07T05:46:00.000Z",
+      "expiryRaw": "March 7, 2026 @ 1:46pm (Local Time)"
+    },
+    {
+      "type": "QuestSpookyAura",
+      "active": false,
+      "title": "You have the Spooky Aura!",
+      "description": "This special Trap Aura grants the following:\n\t\t\t\t\n\t\t\t\t• 30% Power Bonus\n\t\t\t\t• Chance to find Wealth Charms\n\t\t\t\t• Chance to find Cursed Gold",
+      "expiryDate": "2026-02-25T05:03:00.000Z",
+      "expiryRaw": "February 25, 2026 @ 1:03pm (Local Time)"
+    },
+    {
+      "type": "QuestLightningAura",
+      "active": false,
+      "title": "You have the Lightning Aura!",
+      "description": "A bolt of lightning has struck your trap!\n\t\t\t\tThis electrical energy grants the following:\n\t\t\t\t\n\t\t\t\t• 25% Power Bonus\n\t\t\t\t• Chance to find Ful'Mina's Gift\n\t\t\t\t\n\t\t\t\tMore powerful mice will drop Ful'Mina's Gift more often.",
+      "expiryDate": "2022-09-13T09:59:00.000Z",
+      "expiryRaw": "September 13, 2022 @ 5:59pm (Local Time)"
+    },
+    {
+      "type": "QuestAnniversaryAura",
+      "active": true,
+      "title": "You have the Anniversary Aura!",
+      "description": "Celebrate MouseHunt's Anniversary with this powerful Anniversary Aura!\n\t\t\t\t\n\t\t\t\tWhile this aura is active, all mice have a chance to drop SUPER|brie+ and Party Charms anywhere in the Kingdom!\n\t\t\t\t\n\t\t\t\tThe aura can be extended up to:March 7, 2027 11:59pm (UTC)",
+      "expiryDate": "2026-10-07T17:56:00.000Z",
+      "expiryRaw": "October 8, 2026 @ 1:56am (Local Time)"
+    },
+    {
+      "type": "QuestJetStreamAura",
+      "active": false,
+      "title": "You have the Jet Stream Aura!",
+      "description": "This Trap Aura grants the following at the Floating Islands:\n\t\t\t\t\n\t\t\t\t• Exploration Speed +1\n\t\t\t\t• Sky Wardens drop +4 Storm Cells\n\t\t\t\t• Sky Paragons drop +8 Storm Cells",
+      "expiryDate": "2026-03-18T15:08:00.000Z",
+      "expiryRaw": "March 18, 2026 @ 11:08pm (Local Time)"
+    },
+    {
+      "type": "QuestMillenniaura",
+      "active": false,
+      "title": "You have the Millenniaura!",
+      "description": "This special Trap Aura grants the following:\n\t\t\t\t\n\t\t\t\t• 30% Power Bonus\n\t\t\t\t• +10 Luck",
+      "expiryDate": "2026-02-21T04:18:00.000Z",
+      "expiryRaw": "February 21, 2026 @ 12:18pm (Local Time)"
+    },
+    {
+      "type": "QuestDragonsMightAura",
+      "active": true,
+      "title": "You have the Dragon's Might Aura!",
+      "description": "This Aura grants a 25% Power Bonus against all mice in addition to the following against Dragons:\n\t\t\t\t\n\t\t\t\t• 300% Power Bonus\n\t\t\t\t• Bonus Dragonhide Sliver Loot Drops",
+      "expiryDate": "2026-03-23T05:48:00.000Z",
+      "expiryRaw": "March 23, 2026 @ 1:48pm (Local Time)"
+    }
+  ],
+  "favouriteMice": [
+    {
+      "type": "master_of_the_dojo",
+      "name": "Master of the Dojo",
+      "catches": 654,
+      "misses": 501,
+      "imageUrl": "https://www.mousehuntgame.com/images/mice/thumb/61dc523802013db548523ffc8b324883.gif?cv=8",
+      "crownTier": "gold",
+      "group": 1
+    }
+  ],
+  "treasureMap": {
+    "currentMapName": "Rare Origin of Dragons Treasure Map",
+    "currentMapImageUrl": "https://www.mousehuntgame.com/images/items/convertibles/05df7f7df577d981aa795b36d67225c5.gif?cv=8",
+    "currentMapId": 7351065,
+    "cluesFound": 8673,
+    "globalRanking": 1603
+  },
+  "tournamentAwards": [
+    {
+      "imageUrl": "https://www.mousehuntgame.com/images/items/collectibles/6d1c8f4454bed17ffbb6715553d8cdb0.jpg?cv=8",
+      "quantity": 2
+    },
+    {
+      "imageUrl": "https://www.mousehuntgame.com/images/items/collectibles/bfd35c3fbf21b9dbdb39e9c42ba0dff1.jpg?cv=8",
+      "quantity": 7
+    },
+    {
+      "imageUrl": "https://www.mousehuntgame.com/images/items/collectibles/aec8ef247426f3560899d7ebafbb2ac5.jpg?cv=8",
+      "quantity": 5
+    },
+    {
+      "imageUrl": "https://www.mousehuntgame.com/images/items/collectibles/ae4ad0511280558471d441bba366feed.jpg?cv=8",
+      "quantity": 43
+    },
+    {
+      "imageUrl": "https://www.mousehuntgame.com/images/items/collectibles/eef1baf8f611341524de5af052e06a05.jpg?cv=8",
+      "quantity": 241
+    },
+    {
+      "imageUrl": "https://www.mousehuntgame.com/images/items/collectibles/b45427f87d198fade78866bfa7d5010e.jpg?cv=8",
+      "quantity": 77
+    }
+  ]
+}

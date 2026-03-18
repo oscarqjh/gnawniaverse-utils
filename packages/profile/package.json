@@ -1,0 +1,50 @@
+{
+  "name": "@gnawniaverse/profile",
+  "version": "1.0.0",
+  "description": "Hunter profile parser and fetcher for MouseHunt",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": { "types": "./dist/index.d.ts", "default": "./dist/index.js" },
+      "require": { "types": "./dist/index.d.cts", "default": "./dist/index.cjs" }
+    },
+    "./parsers": {
+      "import": { "types": "./dist/parsers/index.d.ts", "default": "./dist/parsers/index.js" },
+      "require": { "types": "./dist/parsers/index.d.cts", "default": "./dist/parsers/index.cjs" }
+    },
+    "./fetcher": {
+      "import": { "types": "./dist/fetcher.d.ts", "default": "./dist/fetcher.js" },
+      "require": { "types": "./dist/fetcher.d.cts", "default": "./dist/fetcher.cjs" }
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["mousehunt", "gnawniaverse", "hunter-profile", "game-utils"],
+  "author": "oscarqjh",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oscarqjh/gnawniaverse-utils.git",
+    "directory": "packages/profile"
+  },
+  "devDependencies": {
+    "@gnawniaverse/shared": "workspace:*",
+    "tsup": "^8.4.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.7.0",
+    "vitest": "^4.1.0"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0"
+  }
+}
