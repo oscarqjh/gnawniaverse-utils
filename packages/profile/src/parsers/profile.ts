@@ -318,13 +318,24 @@ export function parseProfile(html: string): ParseResult<HunterProfile> {
   }
 
   // ── Tournament awards ──
+  const TOURNAMENT_TIER_MAP: Record<string, TournamentAward["type"]> = {
+    "6d1c8f4454bed17ffbb6715553d8cdb0": "gold",
+    "bfd35c3fbf21b9dbdb39e9c42ba0dff1": "silver",
+    "aec8ef247426f3560899d7ebafbb2ac5": "bronze",
+    "ae4ad0511280558471d441bba366feed": "challenger",
+    "eef1baf8f611341524de5af052e06a05": "competitor",
+    "b45427f87d198fade78866bfa7d5010e": "participant",
+  };
+
   const tournamentAwards: TournamentAward[] = [];
   $(".hunterInfoView-teamTab-content .itemImage").each((_, el) => {
     const $el = $(el);
     const imageUrl = extractBgUrl($el.attr("style"));
     const quantity = parseNum($el.find(".quantity").text());
     if (imageUrl) {
-      tournamentAwards.push({ imageUrl, quantity });
+      const hashMatch = imageUrl.match(/\/([a-f0-9]{32})\.\w+/);
+      const type = hashMatch ? (TOURNAMENT_TIER_MAP[hashMatch[1]] ?? "unknown") : "unknown";
+      tournamentAwards.push({ type, imageUrl, quantity });
     }
   });
 

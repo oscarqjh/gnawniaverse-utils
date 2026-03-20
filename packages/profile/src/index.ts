@@ -10,6 +10,7 @@ export type {
   TrapAura,
   FavouriteMouse,
   TreasureMapInfo,
+  TournamentTier,
   TournamentAward,
   MouseStat,
   MouseCategory,

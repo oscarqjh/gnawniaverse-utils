@@ -140,8 +140,12 @@ export interface TreasureMapInfo {
   globalRanking: number | null;
 }
 
+/** Tournament award tier. */
+export type TournamentTier = "gold" | "silver" | "bronze" | "challenger" | "competitor" | "participant" | "unknown";
+
 /** Tournament award. */
 export interface TournamentAward {
+  type: TournamentTier;
   imageUrl: string;
   quantity: number;
 }

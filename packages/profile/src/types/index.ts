@@ -9,6 +9,7 @@ export type {
   TrapAura,
   FavouriteMouse,
   TreasureMapInfo,
+  TournamentTier,
   TournamentAward,
 } from "./profile.js";
 
