@@ -154,13 +154,25 @@ export function parseMeta(rows: string[][]): EventMeta {
 
 // ── Tier parser ─────────────────────────────────────────────────
 
+const MAX_URL_LENGTH = 2048;
+
+function isValidUrl(url: string): boolean {
+  if (url.length > MAX_URL_LENGTH) return false;
+  try {
+    const parsed = new URL(url);
+    return parsed.protocol === "https:" || parsed.protocol === "http:";
+  } catch {
+    return false;
+  }
+}
+
 function parseImage(
   url: string | undefined,
   desc: string | undefined,
   artist: string | undefined,
 ): AchievementImage | null {
   const trimmedUrl = trimOrNull(url);
-  if (!trimmedUrl) return null;
+  if (!trimmedUrl || !isValidUrl(trimmedUrl)) return null;
   return {
     url: trimmedUrl,
     description: trimOrNull(desc),
