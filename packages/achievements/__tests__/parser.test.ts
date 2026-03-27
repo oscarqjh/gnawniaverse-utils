@@ -99,16 +99,19 @@ describe("parseTiers", () => {
     expect(tiers[1].badge.artist).toBeNull();
   });
 
-  it("skips rows without badge_url", () => {
+  it("includes tiers with no badge (badge is null)", () => {
     const rows = [
       ["tier_name", "badge_url"],
       ["NoBadge", ""],
-      ["HasBadge", "https://ok.png"],
+      ["HasBadge", "https://example.com/ok.png"],
     ];
 
     const tiers = parseTiers(rows);
-    expect(tiers).toHaveLength(1);
-    expect(tiers[0].name).toBe("HasBadge");
+    expect(tiers).toHaveLength(2);
+    expect(tiers[0].name).toBe("NoBadge");
+    expect(tiers[0].badge).toBeNull();
+    expect(tiers[1].name).toBe("HasBadge");
+    expect(tiers[1].badge?.url).toBe("https://example.com/ok.png");
   });
 
   it("returns empty for missing header", () => {
