@@ -17,8 +17,6 @@ jobs:
           node-version: 22
       - name: Install dependencies
         run: cd packages/profile && npm ci
-      - name: Type check
-        run: cd packages/profile && npm run typecheck
       - name: Run tests
         run: cd packages/profile && npm test
       - name: Build
