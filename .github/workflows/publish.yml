@@ -1,0 +1,58 @@
+name: Publish to npm
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  publish-profile:
+    name: Publish @gnawniaverse/profile
+    runs-on: ubuntu-latest
+    environment: npm
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+      - name: Install dependencies
+        run: cd packages/profile && npm ci
+      - name: Type check
+        run: cd packages/profile && npm run typecheck
+      - name: Run tests
+        run: cd packages/profile && npm test
+      - name: Build
+        run: cd packages/profile && npm run build
+      - name: Publish
+        run: cd packages/profile && npm publish --access public --provenance
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  publish-achievements:
+    name: Publish @gnawniaverse/achievements
+    runs-on: ubuntu-latest
+    environment: npm
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+      - name: Install dependencies
+        run: cd packages/achievements && npm ci
+      - name: Type check
+        run: cd packages/achievements && npm run typecheck
+      - name: Run tests
+        run: cd packages/achievements && npm test
+      - name: Build
+        run: cd packages/achievements && npm run build
+      - name: Publish
+        run: cd packages/achievements && npm publish --access public --provenance
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
