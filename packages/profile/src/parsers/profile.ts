@@ -3,6 +3,7 @@
  */
 
 import { load } from "cheerio";
+import type { Element } from "domhandler";
 import type {
   HunterProfile,
   TrapSetup,
@@ -197,7 +198,7 @@ export function parseProfile(html: string): ParseResult<HunterProfile> {
 
     // Collect non-middle slots in order (base, bait, charm, skin)
     const nonMiddleSlots: TrapComponent[] = [];
-    $(".hunterInfoView-trapBlock-setup-trap-slot").each((_, el) => {
+    $(".hunterInfoView-trapBlock-setup-trap-slot").each((_: number, el: Element) => {
       const $el = $(el);
       if (($el.attr("class") ?? "").includes("middle")) return;
       const name = $el.attr("data-name");
@@ -246,12 +247,12 @@ export function parseProfile(html: string): ParseResult<HunterProfile> {
 
   // ── Auras ──
   const auras: TrapAura[] = [];
-  $(".trapImageView-trapAura").each((_, el) => {
+  $(".trapImageView-trapAura").each((_: number, el: Element) => {
     const $el = $(el);
     const classList = $el.attr("class") ?? "";
     // Extract aura type from class (skip generic classes)
     const classes = classList.split(/\s+/).filter(
-      (c) => c !== "trapImageView-trapAura" && c !== "mousehuntTooltipParent" && c !== "active" && c !== "hidden",
+      (c: string) => c !== "trapImageView-trapAura" && c !== "mousehuntTooltipParent" && c !== "active" && c !== "hidden",
     );
     const type = classes[0] ?? "";
     if (!type) return;
@@ -270,9 +271,9 @@ export function parseProfile(html: string): ParseResult<HunterProfile> {
 
   // ── Favourite mice ──
   const favouriteMice: FavouriteMouse[] = [];
-  $(".hunterInfoView-favoritesBlock-content").each((_, groupEl) => {
+  $(".hunterInfoView-favoritesBlock-content").each((_: number, groupEl: Element) => {
     const group = parseInt($(groupEl).attr("data-group-number") ?? "0", 10);
-    $(groupEl).find(".hunterInfoView-favoritesBlock-content-mouseImage").each((_, mouseEl) => {
+    $(groupEl).find(".hunterInfoView-favoritesBlock-content-mouseImage").each((_: number, mouseEl: Element) => {
       const $m = $(mouseEl);
       const classList = $m.attr("class") ?? "";
       if (classList.includes("empty-other")) return;
@@ -328,7 +329,7 @@ export function parseProfile(html: string): ParseResult<HunterProfile> {
   };
 
   const tournamentAwards: TournamentAward[] = [];
-  $(".hunterInfoView-teamTab-content .itemImage").each((_, el) => {
+  $(".hunterInfoView-teamTab-content .itemImage").each((_: number, el: Element) => {
     const $el = $(el);
     const imageUrl = extractBgUrl($el.attr("style"));
     const quantity = parseNum($el.find(".quantity").text());

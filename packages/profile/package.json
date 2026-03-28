@@ -8,19 +8,39 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": { "types": "./dist/index.d.ts", "default": "./dist/index.js" },
-      "require": { "types": "./dist/index.d.cts", "default": "./dist/index.cjs" }
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     },
     "./parsers": {
-      "import": { "types": "./dist/parsers/index.d.ts", "default": "./dist/parsers/index.js" },
-      "require": { "types": "./dist/parsers/index.d.cts", "default": "./dist/parsers/index.cjs" }
+      "import": {
+        "types": "./dist/parsers/index.d.ts",
+        "default": "./dist/parsers/index.js"
+      },
+      "require": {
+        "types": "./dist/parsers/index.d.cts",
+        "default": "./dist/parsers/index.cjs"
+      }
     },
     "./fetcher": {
-      "import": { "types": "./dist/fetcher.d.ts", "default": "./dist/fetcher.js" },
-      "require": { "types": "./dist/fetcher.d.cts", "default": "./dist/fetcher.cjs" }
+      "import": {
+        "types": "./dist/fetcher.d.ts",
+        "default": "./dist/fetcher.js"
+      },
+      "require": {
+        "types": "./dist/fetcher.d.cts",
+        "default": "./dist/fetcher.cjs"
+      }
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
@@ -29,7 +49,12 @@
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run build"
   },
-  "keywords": ["mousehunt", "gnawniaverse", "hunter-profile", "game-utils"],
+  "keywords": [
+    "mousehunt",
+    "gnawniaverse",
+    "hunter-profile",
+    "game-utils"
+  ],
   "author": "oscarqjh",
   "license": "MIT",
   "engines": {
@@ -41,6 +66,7 @@
     "directory": "packages/profile"
   },
   "devDependencies": {
+    "domhandler": "^6.0.1",
     "tsup": "^8.4.0",
     "tsx": "^4.21.0",
     "typescript": "^5.7.0",

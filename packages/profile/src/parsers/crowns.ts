@@ -3,6 +3,7 @@
  */
 
 import { load } from "cheerio";
+import type { Element } from "domhandler";
 import type { CrownsData, CrownTier, CrownMouse, ParseResult } from "../types/index.js";
 import { parseNum, WarningCollector, isCloudflareChallenge } from "./helpers.js";
 
@@ -33,7 +34,7 @@ export function parseCrowns(html: string): ParseResult<CrownsData> {
 
   for (const tier of tiers) {
     $(`.mouseCrownsView-group.${tier} .mouseCrownsView-group-mouse`).each(
-      (_, el) => {
+      (_: number, el: Element) => {
         const $el = $(el);
         const id = $el.attr("data-mouse-id");
         const type = $el.attr("data-mouse-type");
