@@ -3,7 +3,7 @@
  */
 
 import { load } from "cheerio";
-import type { Element } from "domhandler";
+
 import type {
   HunterProfile,
   TrapSetup,
@@ -198,7 +198,7 @@ export function parseProfile(html: string): ParseResult<HunterProfile> {
 
     // Collect non-middle slots in order (base, bait, charm, skin)
     const nonMiddleSlots: TrapComponent[] = [];
-    $(".hunterInfoView-trapBlock-setup-trap-slot").each((_: number, el: Element) => {
+    $(".hunterInfoView-trapBlock-setup-trap-slot").each((_: number, el: any) => {
       const $el = $(el);
       if (($el.attr("class") ?? "").includes("middle")) return;
       const name = $el.attr("data-name");
@@ -247,7 +247,7 @@ export function parseProfile(html: string): ParseResult<HunterProfile> {
 
   // ── Auras ──
   const auras: TrapAura[] = [];
-  $(".trapImageView-trapAura").each((_: number, el: Element) => {
+  $(".trapImageView-trapAura").each((_: number, el: any) => {
     const $el = $(el);
     const classList = $el.attr("class") ?? "";
     // Extract aura type from class (skip generic classes)
@@ -271,9 +271,9 @@ export function parseProfile(html: string): ParseResult<HunterProfile> {
 
   // ── Favourite mice ──
   const favouriteMice: FavouriteMouse[] = [];
-  $(".hunterInfoView-favoritesBlock-content").each((_: number, groupEl: Element) => {
+  $(".hunterInfoView-favoritesBlock-content").each((_: number, groupEl: any) => {
     const group = parseInt($(groupEl).attr("data-group-number") ?? "0", 10);
-    $(groupEl).find(".hunterInfoView-favoritesBlock-content-mouseImage").each((_: number, mouseEl: Element) => {
+    $(groupEl).find(".hunterInfoView-favoritesBlock-content-mouseImage").each((_: number, mouseEl: any) => {
       const $m = $(mouseEl);
       const classList = $m.attr("class") ?? "";
       if (classList.includes("empty-other")) return;
@@ -329,7 +329,7 @@ export function parseProfile(html: string): ParseResult<HunterProfile> {
   };
 
   const tournamentAwards: TournamentAward[] = [];
-  $(".hunterInfoView-teamTab-content .itemImage").each((_: number, el: Element) => {
+  $(".hunterInfoView-teamTab-content .itemImage").each((_: number, el: any) => {
     const $el = $(el);
     const imageUrl = extractBgUrl($el.attr("style"));
     const quantity = parseNum($el.find(".quantity").text());

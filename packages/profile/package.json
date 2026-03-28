@@ -66,7 +66,6 @@
     "directory": "packages/profile"
   },
   "devDependencies": {
-    "domhandler": "^6.0.1",
     "tsup": "^8.4.0",
     "tsx": "^4.21.0",
     "typescript": "^5.7.0",

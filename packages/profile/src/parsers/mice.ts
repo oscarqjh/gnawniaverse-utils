@@ -3,7 +3,7 @@
  */
 
 import { load } from "cheerio";
-import type { Element } from "domhandler";
+
 import type { MouseStat, MouseCategory, MiceData, ParseResult } from "../types/index.js";
 import { textOrNull, extractBgUrl, extractShowArg, WarningCollector, isCloudflareChallenge } from "./helpers.js";
 
@@ -21,7 +21,7 @@ export function parseMice(html: string): ParseResult<MiceData> {
   const categories: MouseCategory[] = [];
 
   // Parse categories from the directory sidebar
-  $(".mouseListView-category").each((_: number, el: Element) => {
+  $(".mouseListView-category").each((_: number, el: any) => {
     const $el = $(el);
     const key = $el.attr("data-category") ?? "";
     const name = $el.find(".mouseListView-category-name").text().trim();
@@ -33,10 +33,10 @@ export function parseMice(html: string): ParseResult<MiceData> {
   });
 
   // Parse mice within each category content block
-  $(".mouseListView-categoryContent-category").each((_: number, catEl: Element) => {
+  $(".mouseListView-categoryContent-category").each((_: number, catEl: any) => {
     const category = $(catEl).attr("data-category") ?? "";
 
-    $(catEl).find(".mouseListView-categoryContent-subgroup-mouse.stats").each((_: number, el: Element) => {
+    $(catEl).find(".mouseListView-categoryContent-subgroup-mouse.stats").each((_: number, el: any) => {
       const $el = $(el);
       const classList = $el.attr("class") ?? "";
       if (classList.includes("header")) return;

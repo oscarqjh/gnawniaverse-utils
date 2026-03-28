@@ -3,7 +3,7 @@
  */
 
 import { load } from "cheerio";
-import type { Element } from "domhandler";
+
 import type { CollectionItem, ItemCategory, ItemsData, ParseResult } from "../types/index.js";
 import { parseNum, textOrNull, extractBgUrl, WarningCollector, isCloudflareChallenge } from "./helpers.js";
 
@@ -20,10 +20,10 @@ export function parseItems(html: string): ParseResult<ItemsData> {
   const items: CollectionItem[] = [];
 
   // Iterate over each category content block to associate items with their category
-  $(".hunterProfileItemsView-categoryContent").each((_: number, catEl: Element) => {
+  $(".hunterProfileItemsView-categoryContent").each((_: number, catEl: any) => {
     const category = $(catEl).attr("data-category") ?? "";
 
-    $(catEl).find(".hunterProfileItemsView-categoryContent-item").each((_: number, el: Element) => {
+    $(catEl).find(".hunterProfileItemsView-categoryContent-item").each((_: number, el: any) => {
       const $el = $(el);
       const classList = $el.attr("class") ?? "";
 
@@ -50,7 +50,7 @@ export function parseItems(html: string): ParseResult<ItemsData> {
   });
 
   const categories: ItemCategory[] = [];
-  $(".hunterProfileItemsView-category").each((_: number, el: Element) => {
+  $(".hunterProfileItemsView-category").each((_: number, el: any) => {
     const $el = $(el);
     const key = $el.attr("data-category") ?? "";
     const name = $el.find(".hunterProfileItemsView-category-name").text().trim();
