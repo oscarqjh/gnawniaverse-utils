@@ -17,9 +17,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          registry-url: https://registry.npmjs.org
       - name: Upgrade npm for OIDC trusted publishing
         run: npm install -g npm@latest
+      - name: Configure npm registry
+        run: npm config set registry https://registry.npmjs.org/
       - name: Install dependencies
         run: cd packages/profile && npm ci
       - name: Type check
@@ -43,9 +44,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          registry-url: https://registry.npmjs.org
       - name: Upgrade npm for OIDC trusted publishing
         run: npm install -g npm@latest
+      - name: Configure npm registry
+        run: npm config set registry https://registry.npmjs.org/
       - name: Install dependencies
         run: cd packages/achievements && npm ci
       - name: Type check
