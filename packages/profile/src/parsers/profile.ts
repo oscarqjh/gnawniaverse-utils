@@ -290,8 +290,8 @@ export function parseProfile(html: string): ParseResult<HunterProfile> {
       favouriteMice.push({
         type: mouseType,
         name: mouseName,
-        catches: parseInt($m.attr("data-num-catches") ?? "0", 10),
-        misses: parseInt($m.attr("data-num-misses") ?? "0", 10),
+        catches: parseInt(($m.attr("data-num-catches") ?? "0").replace(/,/g, ""), 10),
+        misses: parseInt(($m.attr("data-num-misses") ?? "0").replace(/,/g, ""), 10),
         imageUrl: extractBgUrl($m.attr("style")),
         crownTier,
         group,
