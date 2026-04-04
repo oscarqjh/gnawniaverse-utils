@@ -28,8 +28,6 @@ jobs:
         run: cd packages/profile && npm run build
       - name: Publish
         run: cd packages/profile && npm publish --access public --provenance
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   publish-achievements:
     name: Publish @gnawniaverse/achievements
@@ -54,5 +52,3 @@ jobs:
         run: cd packages/achievements && npm run build
       - name: Publish
         run: cd packages/achievements && npm publish --access public --provenance
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
